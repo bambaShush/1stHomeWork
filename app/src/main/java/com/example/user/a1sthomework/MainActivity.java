@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
     List<RowItem> rowItems;
-    ListView mylistview;
+    GridView mylistview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +41,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         contactType = getResources().getStringArray(R.array.contactType);
 
         for (int i = 0; i < member_names.length; i++) {
-            RowItem item = new RowItem(member_names[i],
-                    profile_pics.getResourceId(i, -1), statues[i],
-                    contactType[i]);
+            RowItem item = new RowItem(
+                    profile_pics.getResourceId(i, -1));
             rowItems.add(item);
         }
 
-        mylistview = (ListView) findViewById(R.id.list);
+        mylistview = (GridView) findViewById(R.id.gridview);
         CustomAdapter adapter = new CustomAdapter(this, rowItems);
         mylistview.setAdapter(adapter);
 
