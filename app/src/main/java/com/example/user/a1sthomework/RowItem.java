@@ -6,9 +6,9 @@ public class RowItem {
     private int profile_pic_id;
 
 
-    public RowItem(int profile_pic_id) {
+    public RowItem(int profile_pic_id,String member_name) {
 
-        //this.member_name = member_name;
+        this.member_name = member_name;
         this.profile_pic_id = profile_pic_id;
     }
 

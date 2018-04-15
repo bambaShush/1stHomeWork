@@ -1,9 +1,14 @@
 package com.example.user.a1sthomework;
 
 import android.content.res.TypedArray;
+import android.graphics.Camera;
+import android.graphics.Matrix;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
@@ -42,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         for (int i = 0; i < member_names.length; i++) {
             RowItem item = new RowItem(
-                    profile_pics.getResourceId(i, -1));
+                    profile_pics.getResourceId(i, -1),member_names[i]);
             rowItems.add(item);
         }
 
@@ -62,5 +67,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Toast.makeText(getApplicationContext(), "" + member_name,
                 Toast.LENGTH_SHORT).show();
     }
+
+
+
+
 
 }
