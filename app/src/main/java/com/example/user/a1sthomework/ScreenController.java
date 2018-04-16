@@ -1,9 +1,9 @@
 package com.example.user.a1sthomework;
 
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,8 +74,8 @@ public class ScreenController {
         switch (screen) {
             case MENU:
                 return new MenuFragment();
-            case DIFFICULTY:
-                return new DifficultySelectFragment();
+            //case DIFFICULTY:
+                //return new DifficultySelectFragment();
             case GAME:
                 return new GameFragment();
             case THEME_SELECT:

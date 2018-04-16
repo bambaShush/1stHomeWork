@@ -89,7 +89,7 @@ public class Engine extends EventObserverAdapter {
 
     @Override
     public void onEvent(StartEvent event) {
-        mScreenController.openScreen(Screen.THEME_SELECT);
+        mScreenController.openScreen(ScreenController.Screen.THEME_SELECT);
     }
 
     @Override
@@ -105,13 +105,13 @@ public class Engine extends EventObserverAdapter {
     @Override
     public void onEvent(BackGameEvent event) {
         PopupManager.closePopup();
-        mScreenController.openScreen(Screen.DIFFICULTY);
+        mScreenController.openScreen(ScreenController.Screen.DIFFICULTY);
     }
 
     @Override
     public void onEvent(ThemeSelectedEvent event) {
         mSelectedTheme = event.theme;
-        mScreenController.openScreen(Screen.DIFFICULTY);
+        mScreenController.openScreen(ScreenController.Screen.DIFFICULTY);
         AsyncTask<Void, Void, TransitionDrawable> task = new AsyncTask<Void, Void, TransitionDrawable>() {
 
             @Override
@@ -148,7 +148,7 @@ public class Engine extends EventObserverAdapter {
         arrangeBoard();
 
         // start the screen
-        mScreenController.openScreen(Screen.GAME);
+        mScreenController.openScreen(ScreenController.Screen.GAME);
     }
 
     private void arrangeBoard() {

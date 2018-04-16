@@ -141,7 +141,7 @@ public class PopupWonView extends RelativeLayout {
     private void animateScoreAndTime(final int remainedSeconds, final int achievedScore) {
         final int totalAnimation = 1200;
 
-        Clock.getInstance().startTimer(totalAnimation, 35, new OnTimerCount() {
+        Clock.getInstance().startTimer(totalAnimation, 35, new Clock.OnTimerCount() {
 
             @Override
             public void onTick(long millisUntilFinished) {

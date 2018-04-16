@@ -1,0 +1,8 @@
+<com.example.user.a1sthomework.BoardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.user.a1sthomework"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/board_padding">
+
+
+</com.example.user.a1sthomework.BoardView>
