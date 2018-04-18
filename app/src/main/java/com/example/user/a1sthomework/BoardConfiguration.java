@@ -5,7 +5,9 @@ public class BoardConfiguration {
 
     private static final int _6 = 6;
     private static final int _12 = 12;
+    private static final int _16 = 16;
     private static final int _18 = 18;
+    private static final int _20 = 20;
     private static final int _28 = 28;
     private static final int _32 = 32;
     private static final int _50 = 50;
@@ -20,22 +22,22 @@ public class BoardConfiguration {
         this.difficulty = difficulty;
         switch (difficulty) {
             case 1:
-                numTiles = _6;
+                numTiles = _12;
                 numTilesInRow = 3;
-                numRows = 2;
-                time = 60;
+                numRows = 4;
+                time = 30;
                 break;
             case 2:
-                numTiles = _12;
+                numTiles = _16;
                 numTilesInRow = 4;
-                numRows = 3;
-                time = 90;
+                numRows = 4;
+                time = 45;
                 break;
             case 3:
-                numTiles = _18;
-                numTilesInRow = 6;
-                numRows = 3;
-                time = 120;
+                numTiles = _20;
+                numTilesInRow = 5;
+                numRows = 4;
+                time = 60;
                 break;
             case 4:
                 numTiles = _28;

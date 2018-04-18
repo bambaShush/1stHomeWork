@@ -26,7 +26,8 @@ public class MenuFragment extends Fragment {
     private ImageView mTooltip;
     private ImageView mSettingsGameButton;
     private ImageView mGooglePlayGameButton;
-
+    private String name;
+    private int age;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.menu_fragment, container, false);
@@ -58,7 +59,7 @@ public class MenuFragment extends Fragment {
                 animateAllAssetsOff(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        Shared.eventBus.notify(new StartEvent());
+                        Shared.eventBus.notify(new StartEvent("Name is"));
                     }
                 });
             }

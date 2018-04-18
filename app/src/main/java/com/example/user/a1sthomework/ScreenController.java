@@ -74,8 +74,8 @@ public class ScreenController {
         switch (screen) {
             case MENU:
                 return new MenuFragment();
-            //case DIFFICULTY:
-                //return new DifficultySelectFragment();
+            case DIFFICULTY:
+                return new DifficultySelectFragment();
             case GAME:
                 return new GameFragment();
             case THEME_SELECT:

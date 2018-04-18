@@ -7,6 +7,8 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -89,7 +91,9 @@ public class Engine extends EventObserverAdapter {
 
     @Override
     public void onEvent(StartEvent event) {
-        mScreenController.openScreen(ScreenController.Screen.THEME_SELECT);
+        //mScreenController.openScreen(ScreenController.Screen.THEME_SELECT);
+        final Theme themeAnimals = Themes.createAnimalsTheme();
+        Shared.eventBus.notify(new ThemeSelectedEvent(themeAnimals,event.getNameAndAge()));
     }
 
     @Override

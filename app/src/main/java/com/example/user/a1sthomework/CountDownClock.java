@@ -178,7 +178,10 @@ public abstract class CountDownClock {
     /**
      * Callback fired when the time is up.
      */
-    public abstract void onFinish();
+    public void onFinish(){
+        ScreenController mScreenController=ScreenController.getInstance();
+        mScreenController.openScreen(ScreenController.Screen.DIFFICULTY);
+    }
 
     private static final int MSG = 1;
 

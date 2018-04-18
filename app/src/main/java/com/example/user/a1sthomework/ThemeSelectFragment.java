@@ -30,24 +30,25 @@ public class ThemeSelectFragment extends Fragment {
         final Theme themeEmoji = Themes.createEmojiTheme();
         setStars((ImageView) emoji.findViewById(R.id.theme_emoji), themeEmoji, "emoji");
 
+
         animals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Shared.eventBus.notify(new ThemeSelectedEvent(themeAnimals));
+                Shared.eventBus.notify(new ThemeSelectedEvent(themeAnimals,""));
             }
         });
 
         monsters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Shared.eventBus.notify(new ThemeSelectedEvent(themeMonsters));
+                Shared.eventBus.notify(new ThemeSelectedEvent(themeMonsters,""));
             }
         });
 
         emoji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Shared.eventBus.notify(new ThemeSelectedEvent(themeEmoji));
+                Shared.eventBus.notify(new ThemeSelectedEvent(themeEmoji,""));
             }
         });
 

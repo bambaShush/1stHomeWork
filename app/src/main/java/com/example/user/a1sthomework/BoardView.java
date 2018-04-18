@@ -169,8 +169,8 @@ public class BoardView extends LinearLayout {
     }
 
     public void hideCards(int id1, int id2) {
-        animateHide(mViewReference.get(id1));
-        animateHide(mViewReference.get(id2));
+        //animateHide(mViewReference.get(id1));
+        //animateHide(mViewReference.get(id2));
         flippedUp.clear();
         mLocked = false;
     }
